@@ -6,7 +6,7 @@ With this application, a user can access a home library of movies (in MP4 format
 
 ANY Remote Control ---> FLIRC USB on a PC (HDMI) ---> TV
 
-Prerequisites:
+Prerequisites:<br/>
 ◘ VLC Controls installed through NUGET<br/>
   https://github-wiki-see.page/m/ZeBobo5/Vlc.DotNet/wiki/Using-Vlc.DotNet-in-WinForms<br/>
 ◘ 64 bit VLC installed on host PC: <br/>
