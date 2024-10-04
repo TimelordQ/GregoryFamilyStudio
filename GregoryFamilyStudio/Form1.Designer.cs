@@ -30,7 +30,7 @@
         {
             this.components = new System.ComponentModel.Container();
             this.picResizer = new System.Windows.Forms.PictureBox();
-            this.lblSize = new System.Windows.Forms.Label();
+            this.lblAppTitle = new System.Windows.Forms.Label();
             this.lvMain = new System.Windows.Forms.ListView();
             this.mediaName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.runTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -52,17 +52,17 @@
             this.picResizer.TabIndex = 0;
             this.picResizer.TabStop = false;
             // 
-            // lblSize
+            // lblAppTitle
             // 
-            this.lblSize.AutoSize = true;
-            this.lblSize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(42)))));
-            this.lblSize.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSize.ForeColor = System.Drawing.Color.Yellow;
-            this.lblSize.Location = new System.Drawing.Point(46, 28);
-            this.lblSize.Name = "lblSize";
-            this.lblSize.Size = new System.Drawing.Size(364, 37);
-            this.lblSize.TabIndex = 1;
-            this.lblSize.Text = "Gregory Family Library";
+            this.lblAppTitle.AutoSize = true;
+            this.lblAppTitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(15)))), ((int)(((byte)(25)))), ((int)(((byte)(42)))));
+            this.lblAppTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblAppTitle.ForeColor = System.Drawing.Color.Yellow;
+            this.lblAppTitle.Location = new System.Drawing.Point(46, 28);
+            this.lblAppTitle.Name = "lblAppTitle";
+            this.lblAppTitle.Size = new System.Drawing.Size(364, 37);
+            this.lblAppTitle.TabIndex = 1;
+            this.lblAppTitle.Text = "Gregory Family Library";
             // 
             // lvMain
             // 
@@ -74,7 +74,7 @@
             this.lvMain.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.mediaName,
             this.runTime});
-            this.lvMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lvMain.Font = new System.Drawing.Font("Microsoft Sans Serif", 20F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lvMain.ForeColor = System.Drawing.Color.White;
             this.lvMain.FullRowSelect = true;
             this.lvMain.HideSelection = false;
@@ -93,7 +93,8 @@
             // runTime
             // 
             this.runTime.Text = "Run Time";
-            this.runTime.Width = 150;
+            this.runTime.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.runTime.Width = 140;
             // 
             // lblCurRunTime
             // 
@@ -126,7 +127,7 @@
             this.ControlBox = false;
             this.Controls.Add(this.lblCurRunTime);
             this.Controls.Add(this.lvMain);
-            this.Controls.Add(this.lblSize);
+            this.Controls.Add(this.lblAppTitle);
             this.Controls.Add(this.picResizer);
             this.DoubleBuffered = true;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -135,6 +136,7 @@
             this.MinimizeBox = false;
             this.Name = "Form1";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.Form1_FormClosing);
             this.Load += new System.EventHandler(this.Form1_Load);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Form1_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyUp);
@@ -147,7 +149,7 @@
         #endregion
 
         private System.Windows.Forms.PictureBox picResizer;
-        private System.Windows.Forms.Label lblSize;
+        private System.Windows.Forms.Label lblAppTitle;
         private System.Windows.Forms.ListView lvMain;
         private System.Windows.Forms.ColumnHeader mediaName;
         private System.Windows.Forms.ColumnHeader runTime;

@@ -21,7 +21,10 @@ namespace GregoryFamilyStudio
 {
     public partial class Form1 : Form
     {
-        private string startDirectory;
+        // Modify these to change title and initial directory. 
+        private string startDirectory = "e:\\videos";
+        private string sAppTitle = "Gregory Family Library";
+
         private const string PATHCONSTANT = "-";
         private string sCurDir = "";
         private String vlcInstallDirectory;
@@ -42,14 +45,9 @@ namespace GregoryFamilyStudio
             if (!MyIni.KeyExists("StartDirectory", "Main"))
                 startDirectory = MyIni.Read("StartDirectory", "Main");
             */
+
             if (System.Environment.MachineName == "GREGORY-PC")
-            {
                 startDirectory = "c:\\videos";
-            }
-            else
-            {
-                startDirectory = "e:\\videos";
-            }
 
             vlcControl1 = new VlcControl();
             InitializeComponent();
@@ -60,6 +58,8 @@ namespace GregoryFamilyStudio
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            lblAppTitle.Text = sAppTitle;
+
             vlcControl1.BeginInit();
             var libDirectory = new DirectoryInfo(vlcInstallDirectory);
             vlcControl1 = new Vlc.DotNet.Forms.VlcControl();
@@ -69,6 +69,10 @@ namespace GregoryFamilyStudio
             vlcControl1.EndInit();
             this.Controls.Add(vlcControl1); //Add the control to your container
             vlcControl1.Dock = DockStyle.Fill; //Optional
+
+            lvMain.Columns[0].Width = Screen.PrimaryScreen.WorkingArea.Width - lvMain.Columns[1].Width - 20 - ( lvMain.Left*2);
+            //lvMain.Columns[1].Width
+            Cursor.Hide();
 
             this.Top = 0;
             //picResizer.Height = 684; // Screen.PrimaryScreen.WorkingArea.Height;
@@ -136,20 +140,20 @@ namespace GregoryFamilyStudio
             if (movieState == MovieState.Play)
             {
                 curMovieState = MovieState.Playing;
-                picResizer.Visible = lblSize.Visible = lvMain.Visible = false;
+                picResizer.Visible = lblAppTitle.Visible = lvMain.Visible = false;
                 vlcControl1.Play();
             }
             else if (movieState == MovieState.End )
             {
                 curMovieState = MovieState.Stopped;
-                picResizer.Visible = lblSize.Visible = lvMain.Visible = true;
+                picResizer.Visible = lblAppTitle.Visible = lvMain.Visible = true;
                 lvMain.Focus();
             }
             else if (movieState == MovieState.Stop)
             {
                 vlcControl1.Stop();
                 curMovieState = MovieState.Stopped;
-                picResizer.Visible = lblSize.Visible = lvMain.Visible = true;
+                picResizer.Visible = lblAppTitle.Visible = lvMain.Visible = true;
                 lvMain.Focus();
             }
             else if (movieState == MovieState.Pause)
@@ -180,7 +184,7 @@ namespace GregoryFamilyStudio
         if (sCurDir != startDirectory)
         {
             ListViewItem lvi = lvMain.Items.Add("..");
-            lvi.ForeColor = Color.Green;
+            lvi.ForeColor = Color.SpringGreen;
             lvi.Tag = PATHCONSTANT;
         }
 
@@ -189,7 +193,7 @@ namespace GregoryFamilyStudio
         {
             String sCur = sElement.ToUpper().Substring(sElement.ToUpper().LastIndexOf('\\') + 1, sElement.Length - sElement.ToUpper().LastIndexOf('\\')-1);
             ListViewItem lvi = lvMain.Items.Add( sCur );
-            lvi.ForeColor = Color.LightGreen;
+            lvi.ForeColor = Color.SpringGreen;
             lvi.Tag = PATHCONSTANT;
         }
     
@@ -251,6 +255,11 @@ namespace GregoryFamilyStudio
             }
 
             return (string)result;
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            Cursor.Show();
         }
     }
 
