@@ -7,5 +7,7 @@ When used with the FLIRC device, a user can access a home library of movies (in 
 ANY Remote Control ---> FLIRC USB on a PC (HDMI) ---> TV
 
 Prerequisites:
-◘ VLC Controls installed through NUGET (https://github-wiki-see.page/m/ZeBobo5/Vlc.DotNet/wiki/Using-Vlc.DotNet-in-WinForms)
-◘ 64 bit VLC installed on host PC: https://www.videolan.org/vlc/download-windows.html
+◘ VLC Controls installed through NUGET 
+  https://github-wiki-see.page/m/ZeBobo5/Vlc.DotNet/wiki/Using-Vlc.DotNet-in-WinForms
+◘ 64 bit VLC installed on host PC: 
+  https://www.videolan.org/vlc/download-windows.html
