@@ -1,7 +1,0 @@
-e:\develop\GregoryFamilyStudio\GregoryFamilyStudio\bin\Release\GregoryFamilyStudio.exe
-e:\develop\GregoryFamilyStudio\GregoryFamilyStudio\bin\Release\GregoryFamilyStudio.pdb
-e:\develop\GregoryFamilyStudio\GregoryFamilyStudio\obj\x86\Release\GregoryFamilyStudio.Properties.Resources.resources
-e:\develop\GregoryFamilyStudio\GregoryFamilyStudio\obj\x86\Release\GregoryFamilyStudio.csproj.GenerateResource.Cache
-e:\develop\GregoryFamilyStudio\GregoryFamilyStudio\obj\x86\Release\GregoryFamilyStudio.exe
-e:\develop\GregoryFamilyStudio\GregoryFamilyStudio\obj\x86\Release\GregoryFamilyStudio.pdb
-e:\develop\GregoryFamilyStudio\GregoryFamilyStudio\obj\x86\Release\GregoryFamilyStudio.Form1.resources
