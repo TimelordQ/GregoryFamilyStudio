@@ -2,7 +2,7 @@
 
 A Custom User Interface for coordinating VLC with FLIRC (USB/Remote) for an easy to use home entertainment system.
 
-When used with the FLIRC device, a user can access a home library of movies (in MP4 format) on a regular tv hooked to a computer with a videos directory all with  an old remote controller using the FLIRC USB device (available here https://flirc.tv/). 
+When used with the FLIRC device, a user can access a home library of movies (in MP4 format) on a regular tv hooked to a computer with a videos directory all with  an old remote controller using the FLIRC USB device (available here [https://flirc.tv/](https://flirc.tv/products/flirc-usb-receiver?variant=43513067569384)). 
 
 ANY Remote Control ---> FLIRC USB on a PC (HDMI) ---> TV
 
