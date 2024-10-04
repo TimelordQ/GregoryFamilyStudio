@@ -15,7 +15,7 @@ Prerequisites:
 Things to know:
 In FORM1.CS<br/>
 
-<code>        // Modify these to change title and initial directory. <br/>
+<code>// Modify these to change title and initial directory. <br/>
         private string startDirectory = "e:\\videos";<br/>
         private string sAppTitle = "Gregory Family Library";<br/>
 </code>
