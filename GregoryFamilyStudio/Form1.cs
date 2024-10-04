@@ -33,6 +33,7 @@ namespace GregoryFamilyStudio
         private MovieState curMovieState;
         private string sCurRunTime;
         private bool m_bShowRunTime = false;
+        private int m_nShowInterval = 0;
 
         public Form1()
         {
@@ -221,10 +222,17 @@ namespace GregoryFamilyStudio
 
         private void tmrShowRuntime_Tick(object sender, EventArgs e)
         {
-            if (m_bShowRunTime)
+            if( m_nShowInterval < System.Convert.ToInt32(tmrShowRunTime.Tag) )
             {
-                showRunTime(m_bShowRunTime);
+                m_nShowInterval += tmrShowRunTime.Interval;
+                showRunTime(true);
             }
+            else
+            {
+                showRunTime(false);
+                tmrShowRunTime.Enabled = false;
+            }
+
         }
 
         private void Form1_KeyUp(object sender, KeyEventArgs e)
@@ -238,6 +246,13 @@ namespace GregoryFamilyStudio
                     File.Delete(sCurFile);
                     refreshFiles();
                 }
+            }
+            else if ( ((e.KeyCode == Keys.Right) || (e.KeyCode == Keys.Left)) &&
+                    curMovieState == MovieState.Playing)
+            {
+                vlcControl1.Time += ((e.KeyCode == Keys.Right)?10:-10) * 1000; // (10 seconds * 1000  )
+                m_nShowInterval = 0;
+                tmrShowRunTime.Enabled = true;
             }
             return;
         }

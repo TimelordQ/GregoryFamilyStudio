@@ -35,7 +35,7 @@
             this.mediaName = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.runTime = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.lblCurRunTime = new System.Windows.Forms.Label();
-            this.tmrShowRuntime = new System.Windows.Forms.Timer(this.components);
+            this.tmrShowRunTime = new System.Windows.Forms.Timer(this.components);
             this.tmrEndReached = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.picResizer)).BeginInit();
             this.SuspendLayout();
@@ -110,9 +110,10 @@
             this.lblCurRunTime.Text = "Gregory Family Library";
             this.lblCurRunTime.Visible = false;
             // 
-            // tmrShowRuntime
+            // tmrShowRunTime
             // 
-            this.tmrShowRuntime.Tick += new System.EventHandler(this.tmrShowRuntime_Tick);
+            this.tmrShowRunTime.Tag = "4000";
+            this.tmrShowRunTime.Tick += new System.EventHandler(this.tmrShowRuntime_Tick);
             // 
             // tmrEndReached
             // 
@@ -154,7 +155,7 @@
         private System.Windows.Forms.ColumnHeader mediaName;
         private System.Windows.Forms.ColumnHeader runTime;
         private System.Windows.Forms.Label lblCurRunTime;
-        private System.Windows.Forms.Timer tmrShowRuntime;
+        private System.Windows.Forms.Timer tmrShowRunTime;
         private System.Windows.Forms.Timer tmrEndReached;
     }
 }
