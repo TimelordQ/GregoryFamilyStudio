@@ -7,9 +7,18 @@ When used with the FLIRC device, a user can access a home library of movies (in 
 ANY Remote Control ---> FLIRC USB on a PC (HDMI) ---> TV
 
 Prerequisites:
-◘ VLC Controls installed through NUGET 
-  https://github-wiki-see.page/m/ZeBobo5/Vlc.DotNet/wiki/Using-Vlc.DotNet-in-WinForms
-◘ 64 bit VLC installed on host PC: 
-  https://www.videolan.org/vlc/download-windows.html
+◘ VLC Controls installed through NUGET<br/>
+  https://github-wiki-see.page/m/ZeBobo5/Vlc.DotNet/wiki/Using-Vlc.DotNet-in-WinForms<br/>
+◘ 64 bit VLC installed on host PC: <br/>
+  https://www.videolan.org/vlc/download-windows.html<br/>
 
+Things to know:
+In FORM1.CS<br/>
+<code>
+        // Modify these to change title and initial directory. <br/>
+        private string startDirectory = "e:\\videos";<br/>
+        private string sAppTitle = "Gregory Family Library";<br/>
+</code>
+<br/>
+Application Screenshot:<br/>
 <img src="https://github.com/TimelordQ/GregoryFamilyStudio/blob/main/GregoryFamilyStudio.jpg">
