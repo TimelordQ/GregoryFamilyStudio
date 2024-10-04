@@ -11,3 +11,5 @@ Prerequisites:
   https://github-wiki-see.page/m/ZeBobo5/Vlc.DotNet/wiki/Using-Vlc.DotNet-in-WinForms
 ◘ 64 bit VLC installed on host PC: 
   https://www.videolan.org/vlc/download-windows.html
+
+<img src="https://github.com/TimelordQ/GregoryFamilyStudio/blob/main/GregoryFamilyStudio.jpg">
