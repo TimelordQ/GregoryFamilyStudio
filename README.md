@@ -1,6 +1,6 @@
 # Gregory Family Studio
 
-A PC User Interface which leverages VLC with FLIRC for an easy to use home entertainment system written in C#
+A Custom User Interface for coordinating VLC with FLIRC (USB/Remote) for an easy to use home entertainment system.
 
 When used with the FLIRC device, a user can access a home library of movies (in MP4 format) on a regular tv hooked to a computer with a videos directory all with  an old remote controller using the FLIRC USB device (available here https://flirc.tv/). 
 
@@ -14,8 +14,8 @@ Prerequisites:
 
 Things to know:
 In FORM1.CS<br/>
-<code>
-        // Modify these to change title and initial directory. <br/>
+
+<code>        // Modify these to change title and initial directory. <br/>
         private string startDirectory = "e:\\videos";<br/>
         private string sAppTitle = "Gregory Family Library";<br/>
 </code>
